@@ -20,6 +20,8 @@ phoneNumber = "1234567890"
 login = "user@example.com"
 pw = "password"
 msg = "Open seat found for CRN "  +crn+ "!"
+# other settings
+email = "user@example.com"
 
 if not os.path.exists(logpath):
   open(logpath, 'w').close()
@@ -49,7 +51,7 @@ if open_seats[2] != '0':
   voice = Voice()
   voice.login(login, pw)
   voice.send_sms(phoneNumber, msg)
-  os.system("echo " +msg+ " | mail williamchen16@gmail.com")
+  os.system("echo " +msg+ " | mail "+email)
   log.write("done")
   print >> sys.stderr, "Done. Seats available: " + open_seats[2]
 else:
