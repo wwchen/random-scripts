@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-# William Chen <williamchen16@gmail.com>
 # Put this script in cron:
 #   */30 6-23 * * * python <path>/check_schedule2.py
 # change enableGV to False if you don't use or need Google Voice 
